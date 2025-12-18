@@ -6,7 +6,20 @@ function Comment({ username, content, avatarUrl }: CommentData) {
     return (
         <>
             <div className="comment">
-                <p>{username} {content} {avatarUrl}</p>
+                <div className={"comment-header"}>
+                    <img
+                        src={avatarUrl}
+                        alt={`${username}'s avatar`}
+                        className="avatar"
+                    />
+                    <p>{username}</p>
+                </div>
+                <div className="comment-content">
+                    <p>{content}</p>
+                </div>
+                <div className="comment-footer">
+                    
+                </div>
             </div>
         </>
     )

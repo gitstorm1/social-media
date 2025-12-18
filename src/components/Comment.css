@@ -1,8 +1,43 @@
+/* Container for the whole comment */
 .comment {
-    padding: 8px 0;
-    font-size: 0.9rem;
-    color: #4a4a4a;
+    padding: 12px 0;
     border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Space between header and content */
+}
+
+/* Aligning avatar and username */
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Sizing down the comment avatar */
+.comment-header .avatar {
+    width: 32px; /* Smaller than the post avatar */
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.comment-header p {
+    font-weight: 600;
+    margin: 0;
+    font-size: 0.85rem;
+    color: #262626;
+}
+
+/* Indenting the text slightly so it lines up under the name */
+.comment-content {
+    padding-left: 42px; /* avatar width (32px) + gap (10px) */
+}
+
+.comment-content p {
+    margin: 0;
+    line-height: 1.4;
+    color: #4a4a4a;
 }
 
 .comment:last-child {
