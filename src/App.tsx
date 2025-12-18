@@ -8,27 +8,27 @@ import reactLogo from "./assets/react.svg";
 function App() {
     const postsData: PostData[] = [
         {
-            username: "john_doe",
+            username: "John",
             content: "Hello, this is my first post!",
             avatarUrl: reactLogo,
             comments: [
                 {
                     id: "akdjad",
-                    username: "nathan",
+                    username: "Nathan",
                     content: "My first comment.",
                     avatarUrl: "https://i.pravatar.cc/150?u=nathan",
                 },
                 {
                     id: "fggddf",
-                    username: "john",
+                    username: "Jason",
                     content: "My second comment.",
-                    avatarUrl: "https://i.pravatar.cc/150?u=john",
+                    avatarUrl: "https://i.pravatar.cc/150?u=j",
                 },
             ],
         },
         {
-            username: "alex_tech",
-            content: "Just finished building a new dashboard with Tailwind CSS. The utility-first approach is a game changer! 🚀",
+            username: "Alex",
+            content: "Working on a new Dashboard using Tailwind CSS!",
             avatarUrl: "https://i.pravatar.cc/150?u=alex",
             comments: [],
         },

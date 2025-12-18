@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Post.css';
+import styles from './Post.module.css';
 
 import { type PostData } from '../types.d.tsx';
 
@@ -23,21 +23,21 @@ function Post({username, content, avatarUrl, comments}: PostData) {
 
     return (
         <>
-            <div className={"post"}>
-                <div className={"post-header"}>
+            <div className={styles.post}>
+                <div className={styles.header}>
                     <img
                         src={avatarUrl}
                         alt={`${username}'s avatar`}
-                        className="avatar"
+                        className={styles.avatar}
                     />
-                    <p className='username'>{username}</p>
+                    <p className={styles.username}>{username}</p>
                 </div>
-                <div className="post-content">
+                <div className={styles.content}>
                     <p>{content}</p>
                 </div>
-                <div className="post-footer">
-                    <button onClick={handleLikeClick} className={`like-button ${isLiked ? 'active' : ''}`}>Like</button>
-                    <span>{likes} {likes === 1 ? 'like' : 'likes'}</span>
+                <div className={styles.footer}>
+                    <button onClick={handleLikeClick} className={`${styles["like-button"]} ${isLiked ? styles.active : ''}`}>Like</button>
+                    <span className={styles["like-count"]}>{likes} {likes === 1 ? 'like' : 'likes'}</span>
                 </div>
                 <CommentsSection
                     comments={comments}
