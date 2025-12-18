@@ -4,28 +4,28 @@
     display: flex;
 }
 
-.comment-left .avatar {
+.commentLeft .avatar {
     width: 32px;
     height: 32px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.comment-right {
+.commentRight {
     padding-left: 12px;
     display: flex;
     flex-direction: column;
     gap: 0px;
 }
 
-.comment-right .username {
+.commentRight .username {
     font-weight: 600;
     margin: 0;
     font-size: 0.85rem;
     color: #262626;
 }
 
-.comment-right .content {
+.commentRight .content {
     margin: 0;
     color: #4a4a4a;
     font-size: 0.85rem;
