@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import './Post.css';
 
-interface PostProps {
-    username: string;
-    content: string;
-    avatarUrl: string;
-}
+import { type PostData } from '../types.d.tsx';
 
-function Post({username, content, avatarUrl}: PostProps) {
+import CommentsSection from './CommentsSection';
+
+function Post({username, content, avatarUrl, comments}: PostData) {
     const [likes, setLikes] = useState(0);
 
     const [isLiked, setIsLiked] = useState(false);
@@ -41,6 +39,9 @@ function Post({username, content, avatarUrl}: PostProps) {
                     <button onClick={handleLikeClick} className={`like-button ${isLiked ? 'active' : ''}`}>Like</button>
                     <span>{likes} {likes === 1 ? 'like' : 'likes'}</span>
                 </div>
+                <CommentsSection
+                    comments={comments}
+                />
             </div>
         </>
     )
