@@ -1,0 +1,10 @@
+.comment {
+    padding: 8px 0;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}

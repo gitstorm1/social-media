@@ -13,9 +13,16 @@ function App() {
             avatarUrl: reactLogo,
             comments: [
                 {
+                    id: "akdjad",
                     username: "nathan",
                     content: "My first comment.",
                     avatarUrl: "https://i.pravatar.cc/150?u=nathan",
+                },
+                {
+                    id: "fggddf",
+                    username: "john",
+                    content: "My second comment.",
+                    avatarUrl: "https://i.pravatar.cc/150?u=john",
                 },
             ],
         },

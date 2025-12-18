@@ -2,15 +2,16 @@ export interface PostData {
     username: string;
     content: string;
     avatarUrl: string;
-    comments: PostComments[];
+    comments: CommentData[];
 }
 
-export interface PostComments {
+export interface CommentData {
+    id: string,
     username: string;
     content: string;
     avatarUrl: string;
 }
 
 export interface CommentsSectionData {
-    comments: PostComments[]
+    comments: CommentData[]
 }
