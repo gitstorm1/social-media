@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './Post.css';
 
 interface PostProps {
@@ -7,6 +8,21 @@ interface PostProps {
 }
 
 function Post({username, content, avatarUrl}: PostProps) {
+    const [likes, setLikes] = useState(0);
+
+    const [isLiked, setIsLiked] = useState(false);
+
+    const handleLikeClick = () => {
+        if (isLiked) {
+            setLikes(likes - 1);
+            setIsLiked(false);
+            return;
+        }
+
+        setLikes(likes + 1);
+        setIsLiked(true);
+    }
+
     return (
         <>
             <div className={"post"}>
@@ -20,6 +36,10 @@ function Post({username, content, avatarUrl}: PostProps) {
                 </div>
                 <div className="post-content">
                     <p>{content}</p>
+                </div>
+                <div className="post-footer">
+                    <button onClick={handleLikeClick} className={`like-button ${isLiked ? 'active' : ''}`}>Like</button>
+                    <span>{likes} {likes === 1 ? 'like' : 'likes'}</span>
                 </div>
             </div>
         </>

@@ -32,3 +32,39 @@
     line-height: 1.5;
     color: #262626;
 }
+
+.post-footer {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.like-button {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.like-button.active {
+    background-color: #ffebee;
+    border-color: #ff5252;
+    color: #ff5252;
+    font-weight: bold;
+}
+
+.like-button:hover {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+}
+
+.like-count {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
