@@ -1,9 +1,9 @@
-import { type CommentsSectionData } from "../types.d.tsx";
+import { type CommentsSectionData } from "../../types.d.tsx";
 
 import styles from './CommentsSection.module.css';
 
-import Comment from "./Comment.tsx";
-import CommentInput from "./CommentInput.tsx";
+import Comment from "../Comment/Comment.tsx";
+import CommentInput from "../CommentInput/CommentInput.tsx";
 
 function CommentsSection({ comments }: CommentsSectionData) {
     return (
