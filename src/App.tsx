@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Post from './components/Post.tsx';
+import './App.css';
+
+import reactLogo from "./assets/react.svg";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const postsData = [
+        {
+            username: "john_doe",
+            content: "Hello, this is my first post!",
+            avatarUrl: reactLogo
+        },
+        {
+            username: "alex_tech",
+            content: "Just finished building a new dashboard with Tailwind CSS. The utility-first approach is a game changer! 🚀",
+            avatarUrl: "https://i.pravatar.cc/150?u=alex"
+        },
+        {
+            username: "sarah_travels",
+            content: "Sunrise at the Grand Canyon was absolutely breathtaking. Highly recommend visiting at least once in your life. ☀️⛰️",
+            avatarUrl: "https://i.pravatar.cc/150?u=sarah"
+        },
+        {
+            username: "dev_mindset",
+            content: "Reminder: It's okay to step away from the screen when you're stuck. Sometimes the best debugging happens during a walk.",
+            avatarUrl: "https://i.pravatar.cc/150?u=dev"
+        },
+        {
+            username: "foodie_gram",
+            content: "Attempted to make homemade sourdough today. It didn't rise much, but the taste is incredible! 🥖😋",
+            avatarUrl: "https://i.pravatar.cc/150?u=foodie"
+        }
+    ];
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMRr
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        <>
+            <div className="app">
+                {postsData.map((postData, index) => (
+                    <Post
+                        key={index}
+                        {...postData}
+                    />
+                ))}
+            </div>
+        </>
+    )
 }
 
-export default App
+export default App;
