@@ -1,4 +1,4 @@
-.comment-input-container {
+.commentInputContainer {
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -8,14 +8,14 @@
     margin: 10px 0;
 }
 
-.comment-field {
+.commentField {
     flex: 1; /* Takes up all available space */
     border: none;
     outline: none; /* Removes the blue highlight when clicking */
     font-size: 0.95rem;
 }
 
-.comment-submit-btn {
+.commentSubmitBtn {
     background-color: #0066da; /* Standard blue */
     color: white;
     border: none;
@@ -26,11 +26,11 @@
     transition: background 0.2s;
 }
 
-.comment-submit-btn:disabled {
+.commentSubmitBtn:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
 
-.comment-submit-btn:hover:not(:disabled) {
+.commentSubmitBtn:hover:not(:disabled) {
     background-color: #0056b3;
 }

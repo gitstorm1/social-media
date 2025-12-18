@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './CommentInput.css';
+import styles from './CommentInput.module.css';
 
 function CommentInput() {
     const [text, setText] = useState("");
@@ -13,17 +13,17 @@ function CommentInput() {
     };
 
     return (
-        <div className="comment-input-container">
+        <div className={styles.commentInputContainer}>
             <input 
                 type="text" 
                 placeholder="Write a comment..." 
                 value={text}
                 onChange={(e) => setText(e.target.value)}
-                className="comment-field"
+                className={styles.commentField}
             />
             <button 
                 onClick={handleSubmit} 
-                className="comment-submit-btn"
+                className={styles.commentSubmitBtn}
                 disabled={!text.trim()} // Disable button if empty
             >
                 Comment
