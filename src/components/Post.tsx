@@ -36,8 +36,8 @@ function Post({username, content, avatarUrl, comments}: PostData) {
                     <p>{content}</p>
                 </div>
                 <div className={styles.footer}>
-                    <button onClick={handleLikeClick} className={`${styles["like-button"]} ${isLiked ? styles.active : ''}`}>Like</button>
-                    <span className={styles["like-count"]}>{likes} {likes === 1 ? 'like' : 'likes'}</span>
+                    <button onClick={handleLikeClick} className={`${styles.likeButton} ${isLiked ? styles.active : ''}`}>Like</button>
+                    <span className={styles.likeCount}>{likes} {likes === 1 ? 'like' : 'likes'}</span>
                 </div>
                 <CommentsSection
                     comments={comments}

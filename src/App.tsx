@@ -1,5 +1,4 @@
 import Post from './components/Post.tsx';
-import './App.css';
 
 import { type PostData } from './types.d.tsx';
 

@@ -1,6 +1,6 @@
 import { type CommentsSectionData } from "../types.d.tsx";
 
-import './CommentsSection.css';
+import styles from './CommentsSection.module.css';
 
 import Comment from "./Comment.tsx";
 import CommentInput from "./CommentInput.tsx";
@@ -8,7 +8,7 @@ import CommentInput from "./CommentInput.tsx";
 function CommentsSection({ comments }: CommentsSectionData) {
     return (
         <>
-            <div className="comments-section">
+            <div className={styles.commentsSection}>
                 <CommentInput />
                 {comments.map((comment) => (
                     <Comment
