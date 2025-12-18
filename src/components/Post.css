@@ -25,12 +25,14 @@
 .username {
     font-weight: bold;
     margin: 0;
+    font-size: 0.96rem;
 }
 
 .post-content p {
     margin: 0;
-    line-height: 1.5;
+    
     color: #262626;
+    font-size: 0.95rem;
 }
 
 .post-footer {
@@ -47,6 +49,7 @@
     border: 1px solid #ddd;
     padding: 5px 12px;
     border-radius: 20px;
+    margin: 0;
     cursor: pointer;
     transition: background 0.2s;
 }
@@ -64,7 +67,7 @@
 }
 
 .like-count {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #666;
     font-weight: 500;
 }

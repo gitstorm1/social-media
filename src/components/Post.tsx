@@ -30,7 +30,7 @@ function Post({username, content, avatarUrl, comments}: PostData) {
                         alt={`${username}'s avatar`}
                         className="avatar"
                     />
-                    <p>{username}</p>
+                    <p className='username'>{username}</p>
                 </div>
                 <div className="post-content">
                     <p>{content}</p>

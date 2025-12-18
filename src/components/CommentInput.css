@@ -1,0 +1,36 @@
+.comment-input-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 25px; /* Creates the rounded pill shape */
+    padding: 5px 5px 5px 15px; /* Extra padding on the left for text */
+    margin: 10px 0;
+}
+
+.comment-field {
+    flex: 1; /* Takes up all available space */
+    border: none;
+    outline: none; /* Removes the blue highlight when clicking */
+    font-size: 0.95rem;
+}
+
+.comment-submit-btn {
+    background-color: #0066da; /* Standard blue */
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.comment-submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.comment-submit-btn:hover:not(:disabled) {
+    background-color: #0056b3;
+}
