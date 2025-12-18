@@ -1,3 +1,7 @@
+export interface PostsSectionData {
+    posts: PostData[];
+}
+
 export interface PostData {
     username: string;
     content: string;
@@ -13,5 +17,5 @@ export interface CommentData {
 }
 
 export interface CommentsSectionData {
-    comments: CommentData[]
+    comments: CommentData[];
 }

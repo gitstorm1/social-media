@@ -1,15 +1,17 @@
-import Post from './components/Post/Post.tsx';
+import PeoplesSection from "./components/PeoplesSection/PeoplesSection.tsx";
+import PostsSection from "./components/PostsSection/PostsSection.tsx";
+import FriendsSection from "./components/FriendsSection/FriendsSection.tsx";
+
+import styles from "./App.module.css";
 
 import { type PostData } from './types.d.tsx';
-
-import reactLogo from "./assets/react.svg";
 
 function App() {
     const postsData: PostData[] = [
         {
             username: "John",
             content: "Hello, this is my first post!",
-            avatarUrl: reactLogo,
+            avatarUrl: "https://i.pravatar.cc/150?u=john",
             comments: [
                 {
                     id: "akdjad",
@@ -53,13 +55,16 @@ function App() {
 
     return (
         <>
-            <div className="app">
-                {postsData.map((postData, index) => (
-                    <Post
-                        key={index}
-                        {...postData}
-                    />
-                ))}
+            <div className={styles.app}>
+                <PeoplesSection
+                
+                />
+                <PostsSection
+                    posts={postsData}
+                />
+                <FriendsSection
+                
+                />
             </div>
         </>
     )
