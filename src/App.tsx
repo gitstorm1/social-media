@@ -9,46 +9,67 @@ import { type PostData } from './types.d.tsx';
 function App() {
     const postsData: PostData[] = [
         {
-            username: "John",
+            user: {
+                id: "u-001",
+                username: "john_doe",
+                avatarUrl: "https://i.pravatar.cc/150?u=john",
+            },
             content: "Hello, this is my first post!",
-            avatarUrl: "https://i.pravatar.cc/150?u=john",
             comments: [
                 {
-                    id: "akdjad",
-                    username: "Nathan",
+                    id: "c-101",
+                    user: {
+                        id: "u-002",
+                        username: "nathan",
+                        avatarUrl: "https://i.pravatar.cc/150?u=nathan",
+                    },
                     content: "My first comment.",
-                    avatarUrl: "https://i.pravatar.cc/150?u=nathan",
                 },
                 {
-                    id: "fggddf",
-                    username: "Jason",
+                    id: "c-102",
+                    user: {
+                        id: "u-003",
+                        username: "jason",
+                        avatarUrl: "https://i.pravatar.cc/150?u=j",
+                    },
                     content: "My second comment.",
-                    avatarUrl: "https://i.pravatar.cc/150?u=j",
                 },
             ],
         },
         {
-            username: "Alex",
-            content: "Working on a new Dashboard using Tailwind CSS!",
-            avatarUrl: "https://i.pravatar.cc/150?u=alex",
+            user: {
+                id: "u-004",
+                username: "alex_tech",
+                avatarUrl: "https://i.pravatar.cc/150?u=alex",
+            },
+            content: "Working on a new Dashboard using React and CSS Modules!",
             comments: [],
         },
         {
-            username: "sarah_travels",
-            content: "Sunrise at the Grand Canyon was absolutely breathtaking. Highly recommend visiting at least once in your life. ☀️⛰️",
-            avatarUrl: "https://i.pravatar.cc/150?u=sarah",
+            user: {
+                id: "u-005",
+                username: "sarah_travels",
+                avatarUrl: "https://i.pravatar.cc/150?u=sarah",
+            },
+            content: "Sunrise at the Grand Canyon was absolutely breathtaking. ☀️⛰️",
             comments: [],
         },
         {
-            username: "dev_mindset",
+            user: {
+                id: "u-006",
+                username: "dev_mindset",
+                avatarUrl: "https://i.pravatar.cc/150?u=dev",
+            },
             content: "Reminder: It's okay to step away from the screen when you're stuck. Sometimes the best debugging happens during a walk.",
-            avatarUrl: "https://i.pravatar.cc/150?u=dev",
             comments: [],
         },
         {
-            username: "foodie_gram",
+            user: {
+                id: "u-007",
+                username: "foodie_gram",
+                avatarUrl: "https://i.pravatar.cc/150?u=foodie",
+            },
             content: "Attempted to make homemade sourdough today. It didn't rise much, but the taste is incredible! 🥖😋",
-            avatarUrl: "https://i.pravatar.cc/150?u=foodie",
             comments: [],
         }
     ];

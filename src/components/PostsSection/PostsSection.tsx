@@ -8,9 +8,9 @@ function PostsSection({ posts }: PostsSectionData) {
     return (
         <>
             <div className={styles.postsSection}>
-                {posts.map((postData, index) => (
+                {posts.map((postData) => (
                     <Post
-                        key={index}
+                        key={postData.user.id}
                         {...postData}
                     />
                 ))}

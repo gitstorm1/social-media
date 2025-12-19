@@ -1,16 +1,18 @@
 import styles from "./FriendCard.module.css";
 
-function FriendsCard() {
+import { type FriendCardData } from "../../types.d.tsx";
+
+function FriendCard({ user }: FriendCardData) {
     return (
         <>
             <div className={styles.friendsCard}>
                 <div className={styles.userInfo}>
                     <img
-                        src={"https://i.pravatar.cc/150?u=test"}
-                        alt={`Test's avatar`}
+                        src={user.avatarUrl}
+                        alt={`${user.username}'s avatar`}
                         className={styles.avatar}
                     />
-                    <p>Ali Muhammad</p>
+                    <p>{user.username}</p>
                 </div>
                 <button className={styles.messageBtn}>Message</button>
             </div>
@@ -18,4 +20,4 @@ function FriendsCard() {
     )
 }
 
-export default FriendsCard;
+export default FriendCard;

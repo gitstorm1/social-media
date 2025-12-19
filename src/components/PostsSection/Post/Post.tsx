@@ -5,7 +5,7 @@ import { type PostData } from '../../../types.d.tsx';
 
 import CommentsSection from './CommentsSection/CommentsSection.tsx';
 
-function Post({username, content, avatarUrl, comments}: PostData) {
+function Post({user, content, comments}: PostData) {
     const [likes, setLikes] = useState(0);
 
     const [isLiked, setIsLiked] = useState(false);
@@ -26,11 +26,11 @@ function Post({username, content, avatarUrl, comments}: PostData) {
             <div className={styles.post}>
                 <div className={styles.header}>
                     <img
-                        src={avatarUrl}
-                        alt={`${username}'s avatar`}
+                        src={user.avatarUrl}
+                        alt={`${user.username}'s avatar`}
                         className={styles.avatar}
                     />
-                    <p className={styles.username}>{username}</p>
+                    <p className={styles.username}>{user.username}</p>
                 </div>
                 <div className={styles.content}>
                     <p>{content}</p>

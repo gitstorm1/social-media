@@ -1,21 +1,33 @@
+export interface User {
+    id: string;
+    username: string;
+    avatarUrl: string;
+}
+
 export interface PostsSectionData {
     posts: PostData[];
 }
 
 export interface PostData {
-    username: string;
+    user: User;
     content: string;
-    avatarUrl: string;
     comments: CommentData[];
 }
 
 export interface CommentData {
-    id: string,
-    username: string;
+    id: string;
+    user: User;
     content: string;
-    avatarUrl: string;
 }
 
 export interface CommentsSectionData {
     comments: CommentData[];
+}
+
+export interface FriendCardData {
+    user: User;
+}
+
+export interface FriendsSectionData {
+    friendsList: FriendCardData[];
 }

@@ -2,19 +2,19 @@ import styles from './Comment.module.css';
 
 import { type CommentData } from '../../../../types.d.tsx';
 
-function Comment({ username, content, avatarUrl }: CommentData) {
+function Comment({ user, content }: CommentData) {
     return (
         <>
             <div className={styles.comment}>
                 <div className={styles.commentLeft}>
                     <img
-                        src={avatarUrl}
-                        alt={`${username}'s avatar`}
+                        src={user.avatarUrl}
+                        alt={`${user.username}'s avatar`}
                         className={styles.avatar}
                     />
                 </div>
                 <div className={styles.commentRight}>
-                    <p className={styles.username}>{username}</p>
+                    <p className={styles.username}>{user.username}</p>
                     <p className={styles.content}>{content}</p>
                 </div>
                 <div className={styles.commentFooter}>
