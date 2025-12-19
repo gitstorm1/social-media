@@ -1,6 +1,6 @@
 import styles from './Comment.module.css';
 
-import { type CommentData } from '../../types.d.tsx';
+import { type CommentData } from '../../../../types.d.tsx';
 
 function Comment({ username, content, avatarUrl }: CommentData) {
     return (

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import styles from './Post.module.css';
 
-import { type PostData } from '../../types.d.tsx';
+import { type PostData } from '../../../types.d.tsx';
 
-import CommentsSection from '../CommentsSection/CommentsSection.tsx';
+import CommentsSection from './CommentsSection/CommentsSection.tsx';
 
 function Post({username, content, avatarUrl, comments}: PostData) {
     const [likes, setLikes] = useState(0);

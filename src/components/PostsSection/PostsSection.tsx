@@ -1,4 +1,4 @@
-import Post from '../Post/Post.tsx';
+import Post from './Post/Post.tsx';
 
 import styles from "./PostsSection.module.css";
 
