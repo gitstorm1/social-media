@@ -1,11 +1,15 @@
-import { useState } from "react";
 import styles from "./FriendsSection.module.css";
+
+import FriendsCard from "./FriendCard.tsx";
 
 function FriendsSection() {
     return (
         <>
             <div className={styles.friendsSection}>
-                <p>test</p>
+                <FriendsCard />
+                <FriendsCard />
+                <FriendsCard />
+                <FriendsCard />
             </div>
         </>
     )

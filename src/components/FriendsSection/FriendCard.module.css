@@ -1,0 +1,55 @@
+.friendsCard {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.friendsCard:hover {
+    background-color: #f8f9fa;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+}
+
+.userInfo p {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 0;
+    padding-left: 12px;
+    color: #262626;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #f0f0f0;
+    border: 1px solid #efefef;
+}
+
+.messageBtn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.messageBtn:hover {
+    background-color: #0056b3;
+}
+
+.messageBtn:active {
+    background-color: #004a99;
+    transform: scale(0.96);
+}
