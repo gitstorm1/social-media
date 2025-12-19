@@ -8,14 +8,16 @@ function FriendsSection({ friendsList }: FriendsSectionData) {
     return (
         <>
             <div className={styles.friendsSection}>
-                {friendsList.map((friendCard) => {
-                    return (
+                <h3 className={styles.title}>Friends</h3>
+
+                <div className={styles.listContainer}>
+                    {friendsList.map((friend) => (
                         <FriendCard
-                            key={friendCard.user.id}
-                            {...friendCard}
+                            key={friend.user.id}
+                            {...friend}
                         />
-                    )
-                })}
+                    ))}
+                </div>
             </div>
         </>
     )
