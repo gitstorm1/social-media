@@ -4,7 +4,7 @@ import FriendsSection from "./components/FriendsSection/FriendsSection.tsx";
 
 import styles from "./App.module.css";
 
-import { type PostData } from './types.d.tsx';
+import { type PostData, type FriendCardData } from './types.d.tsx';
 
 function App() {
     const postsData: PostData[] = [
@@ -74,6 +74,93 @@ function App() {
         }
     ];
 
+    const friendsList: FriendCardData[] = [
+        {
+            user: {
+                id: "f-001",
+                username: "Ali Muhammad",
+                avatarUrl: "https://i.pravatar.cc/150?u=ali",
+            }
+        },
+        {
+            user: {
+                id: "f-002",
+                username: "Sarah Connor",
+                avatarUrl: "https://i.pravatar.cc/150?u=sarah_c",
+            }
+        },
+        {
+            user: {
+                id: "f-003",
+                username: "Mike Ross",
+                avatarUrl: "https://i.pravatar.cc/150?u=mike",
+            }
+        },
+        {
+            user: {
+                id: "f-004",
+                username: "Emma Watson",
+                avatarUrl: "https://i.pravatar.cc/150?u=emma",
+            }
+        },
+        {
+            user: {
+                id: "f-005",
+                username: "Bruce Wayne",
+                avatarUrl: "https://i.pravatar.cc/150?u=bruce",
+            }
+        },
+        {
+            user: {
+                id: "f-006",
+                username: "Diana Prince",
+                avatarUrl: "https://i.pravatar.cc/150?u=diana",
+            }
+        },
+        {
+            user: {
+                id: "f-007",
+                username: "Peter Parker",
+                avatarUrl: "https://i.pravatar.cc/150?u=peter",
+            }
+        },
+        {
+            user: {
+                id: "f-008",
+                username: "Tony Stark",
+                avatarUrl: "https://i.pravatar.cc/150?u=tony",
+            }
+        },
+        {
+            user: {
+                id: "f-009",
+                username: "Natasha Romanoff",
+                avatarUrl: "https://i.pravatar.cc/150?u=natasha",
+            }
+        },
+        {
+            user: {
+                id: "f-010",
+                username: "Clark Kent",
+                avatarUrl: "https://i.pravatar.cc/150?u=clark",
+            }
+        },
+        {
+            user: {
+                id: "f-011",
+                username: "Wanda Maximoff",
+                avatarUrl: "https://i.pravatar.cc/150?u=wanda",
+            }
+        },
+        {
+            user: {
+                id: "f-012",
+                username: "Steve Rogers",
+                avatarUrl: "https://i.pravatar.cc/150?u=steve",
+            }
+        }
+    ];
+
     return (
         <>
             <div className={styles.app}>
@@ -84,7 +171,7 @@ function App() {
                     posts={postsData}
                 />
                 <FriendsSection
-                
+                    friendsList={friendsList}
                 />
             </div>
         </>
