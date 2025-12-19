@@ -5,7 +5,7 @@ function FriendsSection() {
     return (
         <>
             <div className={styles.friendsSection}>
-                
+                <p>test</p>
             </div>
         </>
     )

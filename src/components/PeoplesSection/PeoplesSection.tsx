@@ -5,7 +5,7 @@ function PeoplesSection() {
     return (
         <>
             <div className={styles.peoplesSection}>
-                
+                <p>test</p>
             </div>
         </>
     )
