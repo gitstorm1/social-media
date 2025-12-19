@@ -1,6 +1,8 @@
 .peoplesSection {
     flex: 1;
 
+    box-sizing: border-box;
+
     position: sticky;
     top: 0;
 
