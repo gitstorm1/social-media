@@ -1,4 +1,4 @@
-.friendCard {
+.peopleSuggestionCard {
     display: flex;
     justify-content: space-between;
     padding: 12px;
@@ -6,7 +6,7 @@
     transition: background-color 0.2s ease;
 }
 
-.friendCard:hover {
+.peopleSuggestionCard:hover {
     background-color: #f8f9fa;
     cursor: pointer;
 }
@@ -33,10 +33,10 @@
     border: 1px solid #efefef;
 }
 
-.messageBtn {
-    background-color: #007bff;
-    color: white;
-    border: none;
+.addFriendBtn {
+    background-color: #f0f2f5;
+    color: #161616;
+    border: 1px solid #c9c9c9;
     padding: 6px 14px;
     box-sizing: border-box;
     border-radius: 20px;
@@ -46,11 +46,11 @@
     transition: background-color 0.2s;
 }
 
-.messageBtn:hover {
-    background-color: #0056b3;
+.addFriendBtn:hover {
+    background-color: #e4e6eb;
 }
 
-.messageBtn:active {
-    background-color: #004a99;
+.addFriendBtn:active {
+    background-color: #d8dade;
     transform: scale(0.96);
 }

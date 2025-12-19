@@ -31,3 +31,11 @@ export interface FriendCardData {
 export interface FriendsSectionData {
     friendsList: FriendCardData[];
 }
+
+export interface PeopleSuggestionCardData {
+    user: User;
+}
+
+export interface PeoplesSectionData {
+    suggestionsList: PeopleSuggestionCardData[];
+}

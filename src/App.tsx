@@ -4,7 +4,7 @@ import FriendsSection from "./components/FriendsSection/FriendsSection.tsx";
 
 import styles from "./App.module.css";
 
-import { type PostData, type FriendCardData } from './types.d.tsx';
+import { type PostData, type FriendCardData, type PeopleSuggestionCardData } from './types.d.tsx';
 
 function App() {
     const postsData: PostData[] = [
@@ -71,6 +71,65 @@ function App() {
             },
             content: "Attempted to make homemade sourdough today. It didn't rise much, but the taste is incredible! 🥖😋",
             comments: [],
+        }
+    ];
+
+    const suggestionsList: PeopleSuggestionCardData[] = [
+        {
+            user: {
+                id: "s-001",
+                username: "Barry Allen",
+                avatarUrl: "https://i.pravatar.cc/150?u=barry",
+            }
+        },
+        {
+            user: {
+                id: "s-002",
+                username: "Arthur Curry",
+                avatarUrl: "https://i.pravatar.cc/150?u=arthur",
+            }
+        },
+        {
+            user: {
+                id: "s-003",
+                username: "Victor Stone",
+                avatarUrl: "https://i.pravatar.cc/150?u=victor",
+            }
+        },
+        {
+            user: {
+                id: "s-004",
+                username: "Hal Jordan",
+                avatarUrl: "https://i.pravatar.cc/150?u=hal",
+            }
+        },
+        {
+            user: {
+                id: "s-005",
+                username: "Oliver Queen",
+                avatarUrl: "https://i.pravatar.cc/150?u=oliver",
+            }
+        },
+        {
+            user: {
+                id: "s-006",
+                username: "Shiera Sanders",
+                avatarUrl: "https://i.pravatar.cc/150?u=shiera",
+            }
+        },
+        {
+            user: {
+                id: "s-007",
+                username: "Dinah Lance",
+                avatarUrl: "https://i.pravatar.cc/150?u=dinah",
+            }
+        },
+        {
+            user: {
+                id: "s-008",
+                username: "J'onn J'onzz",
+                avatarUrl: "https://i.pravatar.cc/150?u=jonn",
+            }
         }
     ];
 
@@ -165,7 +224,7 @@ function App() {
         <>
             <div className={styles.app}>
                 <PeoplesSection
-                
+                    suggestionsList={suggestionsList}
                 />
                 <PostsSection
                     posts={postsData}

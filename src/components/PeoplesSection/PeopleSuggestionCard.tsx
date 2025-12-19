@@ -1,11 +1,11 @@
-import styles from "./FriendCard.module.css";
+import styles from "./PeopleSuggestionCard.module.css";
 
-import { type FriendCardData } from "../../types.d.tsx";
+import { type PeopleSuggestionCardData } from "../../types.d.tsx";
 
-function FriendCard({ user }: FriendCardData) {
+function PeopleSuggestionCard({ user }: PeopleSuggestionCardData) {
     return (
         <>
-            <div className={styles.friendCard}>
+            <div className={styles.peopleSuggestionCard}>
                 <div className={styles.userInfo}>
                     <img
                         src={user.avatarUrl}
@@ -14,10 +14,10 @@ function FriendCard({ user }: FriendCardData) {
                     />
                     <p>{user.username}</p>
                 </div>
-                <button className={styles.messageBtn}>Message</button>
+                <button className={styles.addFriendBtn}>Add friend</button>
             </div>
         </>
     )
 }
 
-export default FriendCard;
+export default PeopleSuggestionCard;
