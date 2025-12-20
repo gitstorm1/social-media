@@ -7,6 +7,59 @@
     height: 100%;
 }
 
+:root {
+    /* --- Colors --- */
+    --color-brand-primary: #0064e0;
+    --color-brand-hover: #0056b3;
+    
+    /* Action Blue (used for Message Buttons) */
+    --color-action-primary: #007bff;
+    --color-action-hover: #0056b3;
+    --color-action-active: #004a99;
+    
+    --color-bg-global: #f0f2f5;
+    --color-surface: #ffffff;
+    --color-surface-muted: #fafafa;
+    
+    --color-text-primary: #262626;
+    --color-text-secondary: #65676b;
+    --color-text-muted: #4a4a4a;
+    --color-text-button-alt: #161616;
+    
+    --color-border-standard: #dbdbdb;
+    --color-border-medium: #c9c9c9;
+    --color-border-light: #efefef;
+    --color-border-extra-light: #f0f0f0;
+    
+    --color-like-red: #ff5252;
+    --color-like-bg: #ffebee;
+
+    /* --- Interaction States --- */
+    --color-hover-card: #f8f9fa;
+    --color-hover-grey: #e4e6eb;
+    --color-active-grey: #d8dade;
+
+    /* --- Spacing & Dimensions --- */
+    --header-height: 60px;
+    --card-radius: 8px;
+    --card-radius-lg: 12px;
+    --pill-radius: 25px;
+    --pill-radius-sm: 20px;
+    --avatar-lg: 40px;
+    --avatar-md: 35px;
+    --avatar-sm: 32px;
+
+    /* --- Typography --- */
+    --font-size-logo: 1.5rem;
+    --font-size-app-name: 1.25rem;
+    --font-size-username: 0.96rem;
+    --font-size-username-sm: 0.9rem;
+    --font-size-body: 0.95rem;
+    --font-size-small: 0.85rem;
+    --font-size-btn-sm: 0.8rem;
+    --font-size-meta: 0.7rem;
+}
+
 body {
     margin: 0;
 
