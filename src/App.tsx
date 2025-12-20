@@ -223,15 +223,32 @@ function App() {
     return (
         <>
             <div className={styles.app}>
-                <PeoplesSection
+                <div className={styles.header}>
+                    <div className={styles.logoSection}>
+                        <div className={styles.logoIcon}>C</div>
+                        <h1 className={styles.appName}>Coldbook</h1>
+                    </div>
+
+                    <div className={styles.profileSection}>
+                        <img 
+                            src="https://i.pravatar.cc/150?u=me" 
+                            alt="My Profile" 
+                            className={styles.profilePic} 
+                        />
+                        <span className={styles.arrow}>▼</span>
+                    </div>
+                </div>
+                <div className={styles.mainContent}>
+                    <PeoplesSection
                     suggestionsList={suggestionsList}
-                />
-                <PostsSection
-                    posts={postsData}
-                />
-                <FriendsSection
-                    friendsList={friendsList}
-                />
+                    />
+                    <PostsSection
+                        posts={postsData}
+                    />
+                    <FriendsSection
+                        friendsList={friendsList}
+                    />
+                </div>
             </div>
         </>
     )
