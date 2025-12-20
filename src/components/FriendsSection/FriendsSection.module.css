@@ -1,8 +1,8 @@
 .friendsSection {
     flex: 1;
     position: sticky;
-    top: 0;
-    height: 100vh;
+    top: 60px;
+    height: calc(100vh - 60px);
     border: 1px solid #dbdbdb;
     box-sizing: border-box;
     background-color: white;
