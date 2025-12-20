@@ -34,7 +34,7 @@
 }
 
 .messageBtn {
-    background-color: #007bff;
+    background-color: var(--blue-btn-color);
     color: white;
     border: none;
     padding: 6px 14px;
@@ -47,10 +47,10 @@
 }
 
 .messageBtn:hover {
-    background-color: #0056b3;
+    background-color: var(--blue-btn-hover-color);
 }
 
 .messageBtn:active {
-    background-color: #004a99;
+    background-color: var(--blue-btn-active-color);
     transform: scale(0.96);
 }

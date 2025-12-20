@@ -16,7 +16,7 @@
 }
 
 .commentSubmitBtn {
-    background-color: #0066da; /* Standard blue */
+    background-color: var(--blue-btn-color); /* Standard blue */
     color: white;
     border: none;
     padding: 8px 18px;
@@ -26,11 +26,15 @@
     transition: background 0.2s;
 }
 
+.commentSubmitBtn:active {
+    background-color: var(--blue-btn-active-color);
+}
+
 .commentSubmitBtn:disabled {
-    background-color: #ccc;
+    background-color: var(--blue-btn-disabled-color);
     cursor: not-allowed;
 }
 
 .commentSubmitBtn:hover:not(:disabled) {
-    background-color: #0056b3;
+    background-color: var(--blue-btn-hover-color);
 }
