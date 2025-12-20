@@ -1,8 +1,8 @@
 .commentInputContainer {
     display: flex;
     align-items: center;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--comment-input-bg-color);
+    border: 1px solid var(--comment-input-border-color);
     border-radius: 25px; /* Creates the rounded pill shape */
     padding: 5px 5px 5px 15px; /* Extra padding on the left for text */
     margin: 10px 0;
@@ -17,7 +17,7 @@
 
 .commentSubmitBtn {
     background-color: var(--blue-btn-color); /* Standard blue */
-    color: white;
+    color: var(--blue-btn-text-color);
     border: none;
     padding: 8px 18px;
     border-radius: 20px;

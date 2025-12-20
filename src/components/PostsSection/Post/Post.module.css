@@ -1,5 +1,5 @@
 .post {
-    border: 1px solid #dbdbdb;
+    border: 1px solid var(--post-border-color);
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 20px;
@@ -30,7 +30,7 @@
 .content p {
     margin: 0;
     
-    color: #262626;
+    color: var(--post-content-text-color);
     font-size: 0.95rem;
 }
 
@@ -45,7 +45,7 @@
 
 .likeButton {
     background: none;
-    border: 1px solid #ddd;
+    border: 1px solid var(--post-like-btn-color);
     padding: 5px 12px;
     border-radius: 20px;
     margin: 0;
@@ -54,19 +54,15 @@
 }
 
 .likeButton.active {
-    background-color: #ffebee;
-    border-color: #ff5252;
-    color: #ff5252;
-    font-weight: bold;
+    border-color: var(--post-like-btn-active-color);
+    color: var(--post-like-btn-active-color);
 }
 
 .likeButton:hover {
-    background-color: #f0f0f0;
-    border-color: #bbb;
+    background-color: var(--post-like-btn-hover-color);
 }
 
 .likeCount {
     font-size: 0.85rem;
-    color: #666;
-    font-weight: 500;
+    color: var(--post-like-count-color);
 }

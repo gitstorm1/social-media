@@ -1,7 +1,7 @@
 .commentsSection {
     margin-top: 15px;
     padding: 12px;
-    background-color: #fafafa;
+    background-color: var(--comments-section-bg-color);
     border-top: 1px solid #efefef;
     border-radius: 0 0 8px 8px;
 }

@@ -5,7 +5,7 @@
     gap: 12px;
 
     background-color: white;
-    border: 1px solid #dbdbdb;
+    border: 1px solid var(--post-border-color);
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 16px;
@@ -20,7 +20,7 @@
 
 .input {
     flex: 1;
-    background-color: #f0f2f5;
+    background-color: var(--post-composer-input-bg-color);
     border: none;
     border-radius: 20px;
     padding: 10px 16px;
@@ -31,5 +31,5 @@
 }
 
 .input:hover {
-    background-color: #e4e6eb;
+    background-color: var(--post-composer-input-bg-hover-color);
 }

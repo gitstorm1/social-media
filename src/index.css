@@ -9,11 +9,31 @@
 
 :root {
     /* --- Colors --- */
+    --blue-btn-text-color: white;
     --blue-btn-color: #007bff;
     --blue-btn-hover-color: #0056b3;
     --blue-btn-active-color: #004a99;
     --blue-btn-disabled-color: #ccc;
 
+    --post-composer-input-bg-color: #f0f2f5;
+    --post-composer-input-bg-hover-color: #e4e6eb;
+
+    --post-border-color: #dbdbdb;
+
+    --post-content-text-color: #262626;
+
+    --post-like-btn-color: #ddd;
+    --post-like-btn-active-color: #ff5252;
+    --post-like-btn-hover-color: #f0f0f0;
+    --post-like-count-color: #666;
+
+    --comments-section-bg-color: #fafafa;
+
+    --comment-input-bg-color: #fff;
+    --comment-input-border-color: #ddd;
+
+    --comment-username-color: #262626;
+    --comment-content-text-color: #4a4a4a;
 }
 
 body {
