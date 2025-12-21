@@ -7,7 +7,7 @@
 }
 
 .peopleSuggestionCard:hover {
-    background-color: #f8f9fa;
+    background-color: var(--friend-card-hover-color);
     cursor: pointer;
 }
 
@@ -21,7 +21,7 @@
     font-size: 0.9rem;
     margin: 0;
     padding-left: 12px;
-    color: #262626;
+    color: var(--comment-username-color);
 }
 
 .avatar {
@@ -34,9 +34,9 @@
 }
 
 .addFriendBtn {
-    background-color: #f0f2f5;
-    color: #161616;
-    border: 1px solid #c9c9c9;
+    background-color: var(--add-friend-btn-color);
+    color: var(--add-friend-btn-text-color);
+    border: 1px solid var(--add-friend-btn-border-color);
     padding: 6px 14px;
     box-sizing: border-box;
     border-radius: 20px;
@@ -47,10 +47,10 @@
 }
 
 .addFriendBtn:hover {
-    background-color: #e4e6eb;
+    background-color: var(--add-friend-btn-hover-color);
 }
 
 .addFriendBtn:active {
-    background-color: #d8dade;
+    background-color: var(--add-friend-btn-active-color);
     transform: scale(0.96);
 }

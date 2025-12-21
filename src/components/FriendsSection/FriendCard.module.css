@@ -7,7 +7,7 @@
 }
 
 .friendCard:hover {
-    background-color: #f8f9fa;
+    background-color: var(--friend-card-hover-color);
     cursor: pointer;
 }
 
@@ -21,7 +21,7 @@
     font-size: 0.9rem;
     margin: 0;
     padding-left: 12px;
-    color: #262626;
+    color: var(--friend-card-username-color);
 }
 
 .avatar {

@@ -15,6 +15,15 @@
     --blue-btn-active-color: #004a99;
     --blue-btn-disabled-color: #ccc;
 
+    --add-friend-btn-text-color: #161616;
+    --add-friend-btn-color: #f0f2f5;
+    --add-friend-btn-hover-color: #e4e6eb;
+    --add-friend-btn-active-color: #d8dade;
+    --add-friend-btn-border-color: #c9c9c9;
+
+    --friend-card-username-color: var(--comment-username-color);
+    --friend-card-hover-color: #f8f9fa;
+
     --post-composer-input-bg-color: #f0f2f5;
     --post-composer-input-bg-hover-color: #e4e6eb;
 
@@ -32,7 +41,7 @@
     --comment-input-bg-color: #fff;
     --comment-input-border-color: #ddd;
 
-    --comment-username-color: #262626;
+    --comment-username-color: var(--post-content-text-color);
     --comment-content-text-color: #4a4a4a;
 }
 
