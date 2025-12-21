@@ -1,5 +1,7 @@
 import styles from "./FriendCard.module.css";
 
+import MessageBtn from "../MessageBtn/MessageBtn.tsx";
+
 import { type FriendCardData } from "../../types.d.tsx";
 
 function FriendCard({ user }: FriendCardData) {
@@ -14,7 +16,7 @@ function FriendCard({ user }: FriendCardData) {
                     />
                     <p>{user.username}</p>
                 </div>
-                <button className={styles.messageBtn}>Message</button>
+                <MessageBtn />
             </div>
         </>
     )

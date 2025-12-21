@@ -1,0 +1,21 @@
+.messageBtn {
+    background-color: var(--blue-btn-color);
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.messageBtn:hover {
+    background-color: var(--blue-btn-hover-color);
+}
+
+.messageBtn:active {
+    background-color: var(--blue-btn-active-color);
+    transform: scale(0.96);
+}

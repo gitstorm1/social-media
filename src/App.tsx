@@ -1,5 +1,5 @@
 import HomePage from "./pages/HomePage/HomePage.tsx";
-// import ProfilePage from "./pages/ProfilePage/ProfilePage.tsx";
+import ProfilePage from "./pages/ProfilePage/ProfilePage.tsx";
 
 import styles from "./App.module.css";
 

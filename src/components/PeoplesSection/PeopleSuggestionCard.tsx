@@ -1,5 +1,7 @@
 import styles from "./PeopleSuggestionCard.module.css";
 
+import AddFriendBtn from "../AddFriendBtn/AddFriendBtn.tsx";
+
 import { type PeopleSuggestionCardData } from "../../types.d.tsx";
 
 function PeopleSuggestionCard({ user }: PeopleSuggestionCardData) {
@@ -14,7 +16,7 @@ function PeopleSuggestionCard({ user }: PeopleSuggestionCardData) {
                     />
                     <p>{user.username}</p>
                 </div>
-                <button className={styles.addFriendBtn}>Add friend</button>
+                <AddFriendBtn />
             </div>
         </>
     )
