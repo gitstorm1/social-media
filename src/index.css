@@ -57,6 +57,11 @@
     --comment-content-text-color: #4a4a4a;
 
     /* Profile Page UI Colors */
+    --left-section-card-border-color: var(--post-border-color);
+    --left-section-card-heading-color: var(--peoples-section-title-color);
+
+    --intro-item-heading-color: var(--comment-username-color);
+    --intro-item-text-color: var(--post-content-text-color)
 }
 
 body {

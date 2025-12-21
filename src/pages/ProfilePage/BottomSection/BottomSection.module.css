@@ -1,0 +1,55 @@
+.bottomSection {
+    display: flex;
+}
+
+.leftSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.introCard, .friendsCard {
+    background-color: white;
+    border: 1px solid var(--left-section-card-border-color);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.friendsCard {
+    
+}
+
+.introCard h3, .friendsCard h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: var(--left-section-card-heading-color);
+}
+
+.introItem h4 {
+    margin: 12px 0 4px 0;
+    font-size: 0.9rem;
+    color: var(--intro-item-heading-color);
+}
+
+.introItem p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--intro-item-text-color);
+}
+
+.seeMoreBtn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 8px;
+    background-color: var(--add-friend-btn-color);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.rightSection {
+    flex: 2;
+}
