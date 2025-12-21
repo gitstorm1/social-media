@@ -3,20 +3,20 @@
     align-items: center;
     background-color: var(--comment-input-bg-color);
     border: 1px solid var(--comment-input-border-color);
-    border-radius: 25px; /* Creates the rounded pill shape */
-    padding: 5px 5px 5px 15px; /* Extra padding on the left for text */
+    border-radius: 25px;
+    padding: 5px 5px 5px 15px;
     margin: 10px 0;
 }
 
 .commentField {
-    flex: 1; /* Takes up all available space */
+    flex: 1;
     border: none;
-    outline: none; /* Removes the blue highlight when clicking */
+    outline: none;
     font-size: 0.95rem;
 }
 
 .commentSubmitBtn {
-    background-color: var(--blue-btn-color); /* Standard blue */
+    background-color: var(--blue-btn-color);
     color: var(--blue-btn-text-color);
     border: none;
     padding: 8px 18px;

@@ -1,0 +1,7 @@
+.mainContent {
+    display: flex;
+    box-sizing: border-box;
+
+    padding: 0 50px;
+    gap: 50px;
+}
