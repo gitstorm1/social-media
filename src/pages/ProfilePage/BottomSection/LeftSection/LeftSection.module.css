@@ -1,0 +1,66 @@
+.leftSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.introCard, .friendsCard {
+    background-color: white;
+    border: 1px solid var(--left-section-card-border-color);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.introCard h3, .friendsCard h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: var(--left-section-card-heading-color);
+}
+
+.introItem h4 {
+    margin: 12px 0 4px 0;
+    font-size: 0.9rem;
+    color: var(--intro-item-heading-color);
+}
+
+.introItem p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--intro-item-text-color);
+}
+
+.friendsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.friendPhoto {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Keeps them perfectly square */
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.seeMoreBtn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 8px;
+    background-color: var(--add-friend-btn-color);
+    border: 1px solid var(--add-friend-btn-border-color);
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.seeMoreBtn:hover {
+    background-color: var(--add-friend-btn-hover-color);
+}
+
+.seeMoreBtn:active {
+    background-color: var(--add-friend-btn-active-color);
+}
