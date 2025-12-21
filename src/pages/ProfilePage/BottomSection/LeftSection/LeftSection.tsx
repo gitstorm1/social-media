@@ -20,6 +20,15 @@ function LeftSection() {
                     <span>43 friends</span>
                 </div>
                 <div className={styles.friendsGrid}>
+                    <img className={styles.friendPhoto} src="https://i.pravatar.cc/150?img=17" alt="(Username)" />
+                    <img className={styles.friendPhoto} src="https://i.pravatar.cc/150?img=17" alt="(Username)" />
+                    <img className={styles.friendPhoto} src="https://i.pravatar.cc/150?img=17" alt="(Username)" />
+                    <img className={styles.friendPhoto} src="https://i.pravatar.cc/150?img=17" alt="(Username)" />
+                    <img className={styles.friendPhoto} src="https://i.pravatar.cc/150?img=17" alt="(Username)" />
+                    <img className={styles.friendPhoto} src="https://i.pravatar.cc/150?img=17" alt="(Username)" />
+                    <img className={styles.friendPhoto} src="https://i.pravatar.cc/150?img=17" alt="(Username)" />
+                    <img className={styles.friendPhoto} src="https://i.pravatar.cc/150?img=17" alt="(Username)" />
+                    <img className={styles.friendPhoto} src="https://i.pravatar.cc/150?img=17" alt="(Username)" />
                     {/* You would map your friends here */}
                     {/* Use a slice(0, 9) or similar for your 5-row logic */}
                 </div>

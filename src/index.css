@@ -63,7 +63,9 @@
     --left-section-card-heading-color: var(--peoples-section-title-color);
 
     --intro-item-heading-color: var(--comment-username-color);
-    --intro-item-text-color: var(--post-content-text-color)
+    --intro-item-text-color: var(--post-content-text-color);
+
+    --friends-count-color: var(--intro-item-text-color);
 }
 
 body {
