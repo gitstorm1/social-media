@@ -1,8 +1,12 @@
 import styles from "./MessageBtn.module.css";
 
-function MessageBtn() {
+interface MessageBtnProps {
+    additionalClassNames?: string;
+}
+
+function MessageBtn({ additionalClassNames = "" }: MessageBtnProps) {
     return (
-        <button className={styles.messageBtn}>Message</button>
+        <button className={`${styles.messageBtn} ${additionalClassNames}`}>Message</button>
     )
 }
 

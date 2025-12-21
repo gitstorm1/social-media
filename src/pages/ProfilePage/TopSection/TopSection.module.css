@@ -49,6 +49,11 @@
 
 .actionButtons {
     display: flex;
-    gap: 8px;
+    gap: 14px;
     margin-bottom: 12px; 
+}
+
+.modifyActionBtnSize {
+    padding: 10px 20px;
+    font-size: 0.95rem;
 }

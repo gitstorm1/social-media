@@ -23,8 +23,8 @@ function TopSection() {
                 </div>
 
                 <div className={styles.actionButtons}>
-                    <AddFriendBtn />
-                    <MessageBtn />
+                    <AddFriendBtn additionalClassNames={styles.modifyActionBtnSize} />
+                    <MessageBtn additionalClassNames={styles.modifyActionBtnSize} />
                 </div>
             </div>
         </section>

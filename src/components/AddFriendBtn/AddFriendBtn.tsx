@@ -1,8 +1,12 @@
 import styles from "./AddFriendBtn.module.css";
 
-function AddFriendBtn() {
+interface AddFriendBtnProps {
+    additionalClassNames?: string;
+}
+
+function AddFriendBtn({ additionalClassNames = "" }: AddFriendBtnProps) {
     return (
-        <button className={styles.addFriendBtn}>Add friend</button>
+        <button className={`${styles.addFriendBtn} ${additionalClassNames}`}>Add friend</button>
     )
 }
 
