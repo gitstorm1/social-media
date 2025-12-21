@@ -1,8 +1,8 @@
 .post {
     border: 1px solid var(--post-border-color);
-    border-radius: 8px;
+    border-radius: 16px;
     padding: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     background-color: white;
 }
 
