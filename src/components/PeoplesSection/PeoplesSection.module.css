@@ -8,7 +8,6 @@
     position: sticky;
     top: 60px;
     height: calc(100vh - 60px);
-    overflow-y: auto;
     border: 1px solid var(--peoples-section-border-color);
     background-color: white;
 }

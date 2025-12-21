@@ -7,7 +7,7 @@ export const profilePostsData: PostData[] = [
             username: "Abdul Hadi",
             avatarUrl: "https://i.pravatar.cc/150?u=me",
         },
-        content: "Just finished the profile header layout! The overlapping avatar was tricky but worth it. 🚀",
+        content: "Just finished the layout.",
         comments: [
             {
                 id: "c-201",
@@ -16,7 +16,7 @@ export const profilePostsData: PostData[] = [
                     username: "Abdullah",
                     avatarUrl: "https://i.pravatar.cc/150?u=abdullah",
                 },
-                content: "Looks great! Are you using CSS Grid or Flexbox for the bottom section?",
+                content: "Looks great! Did you use CSS Grid or Flexbox?",
             },
         ],
     },
@@ -26,7 +26,7 @@ export const profilePostsData: PostData[] = [
             username: "Abdul Hadi",
             avatarUrl: "https://i.pravatar.cc/150?u=me",
         },
-        content: "Does anyone else prefer CSS Modules over Tailwind? The local scoping feels much cleaner for large projects.",
+        content: "When is React more suitable than Angular? I would love to hear a professional's take.",
         comments: [],
     },
     {
@@ -35,7 +35,7 @@ export const profilePostsData: PostData[] = [
             username: "Abdul Hadi",
             avatarUrl: "https://i.pravatar.cc/150?u=me",
         },
-        content: "Finally hit 1,200 friends on Coldbook! Thanks for the support everyone.",
+        content: "Are 43 friends a lot? I don't know.",
         comments: [
             {
                 id: "c-202",
@@ -44,7 +44,7 @@ export const profilePostsData: PostData[] = [
                     username: "Sarah",
                     avatarUrl: "https://i.pravatar.cc/150?u=sarah",
                 },
-                content: "Congrats Hadi! Well deserved.",
+                content: "Meh, it depends.",
             },
         ],
     },
