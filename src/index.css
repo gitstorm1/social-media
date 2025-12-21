@@ -21,6 +21,9 @@
     --add-friend-btn-active-color: #d8dade;
     --add-friend-btn-border-color: #c9c9c9;
 
+    --avatar-bg-color: #f0f0f0;
+    --avatar-border-color: #efefef;
+
     --friend-card-username-color: var(--comment-username-color);
     --friend-card-hover-color: #f8f9fa;
 
@@ -28,6 +31,12 @@
     --post-composer-input-bg-hover-color: #e4e6eb;
 
     --post-border-color: #dbdbdb;
+
+    --peoples-section-border-color: var(--post-border-color);
+    --friends-section-border-color: var(--post-border-color);
+
+    --peoples-section-title-color: #262626;
+    --friends-section-title-color: var(--peoples-section-title-color);
 
     --post-content-text-color: #262626;
 

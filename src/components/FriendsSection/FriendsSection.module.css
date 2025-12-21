@@ -3,7 +3,7 @@
     position: sticky;
     top: 60px;
     height: calc(100vh - 60px);
-    border: 1px solid #dbdbdb;
+    border: 1px solid var(--friends-section-border-color);
     box-sizing: border-box;
     background-color: white;
     padding: 16px;
@@ -22,5 +22,5 @@
 
 .title {
     margin: 0;
-    color: #262626;
+    color: var(--friends-section-title-color);
 }
