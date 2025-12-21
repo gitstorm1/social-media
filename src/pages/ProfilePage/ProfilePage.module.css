@@ -4,27 +4,3 @@
     padding: 0 10vw;
     align-items: stretch;
 }
-
-.topSection {
-    display: flex;
-    flex-direction: column;
-}
-
-.coverPhoto {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 0 0 var(--card-radius) var(--card-radius);
-    background-color: var(--color-border-standard);
-}
-
-.basicInfo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.profileNameAvatar {
-    display: flex;
-    align-items: center;
-}

@@ -1,4 +1,4 @@
-:root {
+:root, #root {
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 
     margin: 0;
@@ -8,7 +8,7 @@
 }
 
 :root {
-    /* UI Colors */
+    /* Home Page UI Colors */
     --blue-btn-text-color: white;
     --blue-btn-color: #007bff;
     --blue-btn-hover-color: #0056b3;

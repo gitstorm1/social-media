@@ -22,7 +22,7 @@ function App() {
                 </div>
             </header>
             <main>
-                <HomePage />
+                <ProfilePage />
             </main>
         </div>
     )
