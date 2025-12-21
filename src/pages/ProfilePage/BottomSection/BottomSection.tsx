@@ -5,7 +5,7 @@ import PostsSection from "../../../components/PostsSection/PostsSection.tsx";
 function BottomSection() {
     return (
         <section className={styles.bottomSection}>
-            <div className={styles.leftSection}>
+            <section className={styles.leftSection}>
                 <div className={styles.introCard}>
                     <h3>Intro</h3>
                     <div className={styles.introItem}>
@@ -29,10 +29,10 @@ function BottomSection() {
                     <button className={styles.seeMoreBtn}>See all friends</button>
                 </div>
 
-            </div>
-            <div className={styles.rightSection}>
+            </section>
+            <section className={styles.rightSection}>
                 {/*<PostsSection />*/}
-            </div>
+            </section>
         </section>
     )
 }

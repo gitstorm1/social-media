@@ -1,5 +1,6 @@
 .bottomSection {
     display: flex;
+    align-items: flex-start;
 }
 
 .leftSection {
@@ -33,6 +34,20 @@
     margin: 0;
     font-size: 0.95rem;
     color: var(--intro-item-text-color);
+}
+
+.friendsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.friendPhoto {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Keeps them perfectly square */
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 .seeMoreBtn {
