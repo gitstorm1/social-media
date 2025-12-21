@@ -17,10 +17,6 @@
     padding: 16px;
 }
 
-.friendsCard {
-    
-}
-
 .introCard h3, .friendsCard h3 {
     margin-top: 0;
     font-size: 1.2rem;
@@ -44,10 +40,19 @@
     margin-top: 12px;
     padding: 8px;
     background-color: var(--add-friend-btn-color);
-    border: none;
-    border-radius: 6px;
+    border: 1px solid var(--add-friend-btn-border-color);
+    border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.seeMoreBtn:hover {
+    background-color: var(--add-friend-btn-hover-color);
+}
+
+.seeMoreBtn:active {
+    background-color: var(--add-friend-btn-active-color);
 }
 
 .rightSection {
