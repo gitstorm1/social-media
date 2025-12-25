@@ -1,3 +1,4 @@
+import HeaderLogo from "./components/HeaderLogo/HeaderLogo.tsx";
 import HomePage from "./pages/HomePage/HomePage.tsx";
 import ProfilePage from "./pages/ProfilePage/ProfilePage.tsx";
 
@@ -7,10 +8,7 @@ function App() {
     return (
         <div className={styles.app}>
             <header className={styles.header}>
-                <div className={styles.logoSection}>
-                    <div className={styles.logoIcon}>C</div>
-                    <h1 className={styles.appName}>Coldbook</h1>
-                </div>
+                <HeaderLogo />
 
                 <div className={styles.profileSection}>
                     <img 
