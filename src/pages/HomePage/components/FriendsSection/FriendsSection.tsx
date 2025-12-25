@@ -1,6 +1,6 @@
 import styles from "./FriendsSection.module.css";
 
-import { type FriendsSectionData } from "../../types.d.tsx";
+import { type FriendsSectionData } from "../../../../types.d.tsx";
 
 import FriendCard from "./FriendCard.tsx";
 

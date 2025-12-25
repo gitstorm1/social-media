@@ -1,6 +1,6 @@
 import styles from "./PeoplesSection.module.css";
 
-import { type PeoplesSectionData } from "../../types.d.tsx";
+import { type PeoplesSectionData } from "../../../../types.d.tsx";
 
 import PeopleSuggestionCard from "./PeopleSuggestionCard.tsx";
 

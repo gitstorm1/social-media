@@ -1,7 +1,7 @@
 import styles from "./ProfilePage.module.css";
 
-import TopSection from "./TopSection/TopSection";
-import BottomSection from "./BottomSection/BottomSection";
+import TopSection from "./components/TopSection/TopSection";
+import BottomSection from "./components/BottomSection/BottomSection";
 
 function ProfilePage() {
     return (

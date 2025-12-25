@@ -1,4 +1,4 @@
-import { type PostData } from '../../../types.d.tsx';
+import { type PostData } from '../../../../types.d.tsx';
 
 export const profilePostsData: PostData[] = [
     {

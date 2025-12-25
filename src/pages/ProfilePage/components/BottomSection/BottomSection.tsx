@@ -1,7 +1,7 @@
 import styles from "./BottomSection.module.css";
 
 import LeftSection from "./LeftSection/LeftSection.tsx";
-import PostsSection from "../../../components/PostsSection/PostsSection.tsx";
+import PostsSection from "../../../../components/PostsSection/PostsSection.tsx";
 
 import { profilePostsData } from "./samplePostData.ts";
 

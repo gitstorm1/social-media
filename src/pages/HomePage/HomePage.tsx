@@ -1,6 +1,6 @@
-import PeoplesSection from "../../components/PeoplesSection/PeoplesSection.tsx";
+import PeoplesSection from "./components/PeoplesSection/PeoplesSection.tsx";
 import PostsSection from "../../components/PostsSection/PostsSection.tsx";
-import FriendsSection from "../../components/FriendsSection/FriendsSection.tsx";
+import FriendsSection from "./components/FriendsSection/FriendsSection.tsx";
 
 import styles from "./HomePage.module.css";
 

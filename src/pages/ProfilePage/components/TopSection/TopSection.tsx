@@ -1,7 +1,7 @@
 import styles from "./TopSection.module.css";
 
-import MessageBtn from "../../../components/MessageBtn/MessageBtn.tsx";
-import AddFriendBtn from "../../../components/AddFriendBtn/AddFriendBtn";
+import MessageBtn from "../../../../components/MessageBtn/MessageBtn.tsx";
+import AddFriendBtn from "../../../../components/AddFriendBtn/AddFriendBtn";
 
 function TopSection() {
     return (
