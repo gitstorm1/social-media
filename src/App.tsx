@@ -6,8 +6,9 @@ import RegisterPage from "./pages/RegisterPage/RegisterPage.tsx";
 import styles from "./App.module.css";
 
 function App() {
+    // TODO: Make the app div have white color only when register page is to be loaded
     return (
-        <div className={styles.app}>
+        <div className={styles.app} style={{backgroundColor: "white"}}>
             {/*<header className={styles.header}>
                 <HeaderLogo />
 
