@@ -1,8 +1,8 @@
-import styles from "./HeaderLogo.module.css";
+import styles from "./LargeLogo.module.css";
 
 import logoImage from "../../assets/logo.png";
 
-function HeaderLogo() {
+function LargeLogo() {
     return (
         <div className={styles.logoSection}>
             <img
@@ -14,4 +14,4 @@ function HeaderLogo() {
     );
 }
 
-export default HeaderLogo;
+export default LargeLogo;

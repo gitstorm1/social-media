@@ -5,8 +5,8 @@
 }
 
 .logoIcon {
-    width: 40px;
-    height: 40px;
+    width: 5.0rem;
+    height: 5.0rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@
 }
 
 .appName {
-    font-size: 1.25rem;
+    font-size: 2.5rem;
     font-weight: 800;
     color: #0064e0;
     margin: 0;

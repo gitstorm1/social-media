@@ -1,13 +1,14 @@
 import HeaderLogo from "./components/HeaderLogo/HeaderLogo.tsx";
 import HomePage from "./pages/HomePage/HomePage.tsx";
 import ProfilePage from "./pages/ProfilePage/ProfilePage.tsx";
+import RegisterPage from "./pages/RegisterPage/RegisterPage.tsx";
 
 import styles from "./App.module.css";
 
 function App() {
     return (
         <div className={styles.app}>
-            <header className={styles.header}>
+            {/*<header className={styles.header}>
                 <HeaderLogo />
 
                 <div className={styles.profileSection}>
@@ -18,9 +19,9 @@ function App() {
                     />
                     <span className={styles.arrow}>▼</span>
                 </div>
-            </header>
+            </header>*/}
             <main>
-                <ProfilePage />
+                <RegisterPage />
             </main>
         </div>
     )
