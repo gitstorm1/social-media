@@ -1,0 +1,65 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    border: 1px solid #a4a4a4;
+    background-color: white;
+    padding: 50px;
+    border-radius: 32px;
+    max-width: 500px; /* Limits width on desktop */
+}
+
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fieldGroup label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--peoples-section-title-color);
+}
+
+.fieldGroup input, .fieldGroup select {
+    padding: 12px;
+    border: 1px solid #a4a4a4;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    color: var(--peoples-section-title-color);
+}
+
+/* Row for First and Last Name */
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Row for Date of Birth */
+.dobRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.submitBtn {
+    margin-top: 10px;
+    padding: 14px;
+    background-color: var(--blue-btn-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submitBtn:hover {
+    background-color: var(--blue-btn-hover-color);
+}
+
+.submitBtn:active {
+    background-color: var(--blue-btn-active-color);
+}
