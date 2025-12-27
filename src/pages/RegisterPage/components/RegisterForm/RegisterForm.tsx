@@ -104,7 +104,7 @@ function RegisterForm() {
                 <input type="password" id="confirmPassword" name="confirmPassword" onChange={handleChange} />
             </div>
 
-            <button type="submit" className={styles.submitBtn}>Sign Up</button>
+            <button type="submit" className={styles.submitBtn}>Sign up</button>
         </form>
     )
 }
