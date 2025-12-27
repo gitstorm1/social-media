@@ -2,6 +2,7 @@ import HeaderLogo from "./components/HeaderLogo/HeaderLogo.tsx";
 import HomePage from "./pages/HomePage/HomePage.tsx";
 import ProfilePage from "./pages/ProfilePage/ProfilePage.tsx";
 import RegisterPage from "./pages/RegisterPage/RegisterPage.tsx";
+import LoginPage from "./pages/LoginPage/LoginPage.tsx";
 
 import styles from "./App.module.css";
 
@@ -22,7 +23,7 @@ function App() {
                 </div>
             </header>*/}
             <main>
-                <RegisterPage />
+                <LoginPage />
             </main>
         </div>
     )
