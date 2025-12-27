@@ -1,5 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./RegisterForm.module.css";
+
+const DAYS_IN_MONTH: { [key: string]: number } = {
+    Jan: 31, Feb: 28, Mar: 31, Apr: 30, May: 31, Jun: 30,
+    Jul: 31, Aug: 31, Sep: 30, Oct: 31, Nov: 30, Dec: 31,
+};
 
 function RegisterForm() {
     const [formData, setFormData] = useState({
@@ -8,8 +13,28 @@ function RegisterForm() {
         location: "", email: "", password: "", confirmPassword: ""
     });
 
+
+    function getDaysInMonth(month: string, yearStr: string) {
+        if (!month) return 31;
+        if (month !== "Feb") return DAYS_IN_MONTH[month] || 31;
+
+        const year = parseInt(yearStr);
+        if (!year) return 28;
+        
+        const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+        return isLeapYear ? 29 : 28;
+    }
+
+    // Monitor month/year changes to ensure 'day' remains valid
+    useEffect(() => {
+        const maxDays = getDaysInMonth(formData.month, formData.year);
+        if (formData.day && parseInt(formData.day) > maxDays) {
+            setFormData(prev => ({ ...prev, day: maxDays.toString() }));
+        }
+    }, [formData.month, formData.year]);
+
     const handleChange: React.ChangeEventHandler<HTMLInputElement | HTMLSelectElement> = (element) => {
-        setFormData({ ...formData, [element.target.name]: element.target.value });
+        setFormData(prev => ({ ...prev, [element.target.name]: element.target.value }));
     };
 
     return (
@@ -38,7 +63,7 @@ function RegisterForm() {
                 <div className={styles.dobRow}>
                     <select name="day" onChange={handleChange}>
                         <option value="">Day</option>
-                        {[...Array(31)].map((_, i) => (
+                        {[...Array(getDaysInMonth(formData.month, formData.year))].map((_, i) => (
                             <option key={i + 1} value={i + 1}>{i + 1}</option>
                         ))}
                     </select>
