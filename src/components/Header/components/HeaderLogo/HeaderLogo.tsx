@@ -1,6 +1,6 @@
 import styles from "./HeaderLogo.module.css";
 
-import logoImage from "../../assets/logo.png";
+import logoImage from "../../../../assets/logo.png";
 
 function HeaderLogo() {
     return (
