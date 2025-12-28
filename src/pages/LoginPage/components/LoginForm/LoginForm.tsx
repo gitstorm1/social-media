@@ -25,7 +25,7 @@ function LoginForm() {
                 <input type="password" id="password" name="password" onChange={handleChange} />
             </div>
 
-            <button type="submit" className={styles.submitBtn}>Sign in</button>
+            <button type="button" onClick={() => {console.log("Clicked")}} className={styles.submitBtn}>Sign in</button>
         </form>
     )
 }
