@@ -7,7 +7,7 @@ function LoginForm() {
         password: "",
     });
 
-    const handleChange: React.ChangeEventHandler<HTMLInputElement> = (element) => {
+    function formInputChanged(element: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
         setFormData(prev => ({ ...prev, [element.target.name]: element.target.value }));
     };
 
@@ -16,13 +16,13 @@ function LoginForm() {
             {/* Email */}
             <div className={styles.fieldGroup}>
                 <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="email" onChange={handleChange} />
+                <input type="email" id="email" name="email" onChange={formInputChanged} />
             </div>
 
             {/* Password */}
             <div className={styles.fieldGroup}>
                 <label htmlFor="password">Password:</label>
-                <input type="password" id="password" name="password" onChange={handleChange} />
+                <input type="password" id="password" name="password" onChange={formInputChanged} />
             </div>
 
             <button type="button" onClick={() => {console.log("Clicked")}} className={styles.submitBtn}>Sign in</button>

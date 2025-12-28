@@ -16,7 +16,7 @@ const REGISTER_URL = 'http://localhost:5000/api/v1/auth/register'
 
 function RegisterForm() {
     const { login } = useAuth();
-    
+
     const [formData, setFormData] = useState({
         firstName: "", lastName: "", gender: "",
         day: "", month: "", year: "",
@@ -42,11 +42,11 @@ function RegisterForm() {
         }
     }, [formData.month, formData.year]);
 
-    const handleChange: React.ChangeEventHandler<HTMLInputElement | HTMLSelectElement> = (element) => {
+    function formInputChanged(element: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
         setFormData(prev => ({ ...prev, [element.target.name]: element.target.value }));
     };
 
-    async function registerClicked() {
+    function convertFormDataToPayload() {
         const { day, month, year, ...rest } = formData;
 
         // Format the date into YYYY-MM-DD format
@@ -59,7 +59,15 @@ function RegisterForm() {
         };
 
         console.log(payload);
-        
+
+        return payload;
+    }
+
+    function validatePayload(payload: ReturnType<typeof convertFormDataToPayload>): boolean {
+        return true;
+    }
+
+    async function sendRegisterRequest(payload: ReturnType<typeof convertFormDataToPayload>) {
         try {
             const response = await fetch(REGISTER_URL, {
                 method: 'POST',
@@ -81,43 +89,56 @@ function RegisterForm() {
         }
     }
 
+    async function registerClicked() {
+        const payload = convertFormDataToPayload();
+        
+        const isPayloadValid = validatePayload(payload);
+
+        if (!isPayloadValid) {
+            console.log("Payload ain't valid");
+            return;
+        }
+
+        sendRegisterRequest(payload);
+    }
+
     return (
         <form className={styles.form}>
             {/* First and Last Name */}
             <div className={styles.row}>
                 <div className={styles.fieldGroup}>
                     <label htmlFor="firstName">First name:</label>
-                    <input type="text" id="firstName" name="firstName" onChange={handleChange} />
+                    <input type="text" id="firstName" name="firstName" onChange={formInputChanged} />
                 </div>
                 <div className={styles.fieldGroup}>
                     <label htmlFor="lastName">Last name:</label>
-                    <input type="text" id="lastName" name="lastName" onChange={handleChange} />
+                    <input type="text" id="lastName" name="lastName" onChange={formInputChanged} />
                 </div>
             </div>
 
             {/* Gender */}
             <div className={styles.fieldGroup}>
                 <label htmlFor="gender">Gender:</label>
-                <input type="text" id="gender" name="gender" onChange={handleChange} />
+                <input type="text" id="gender" name="gender" onChange={formInputChanged} />
             </div>
 
             {/* Date of Birth - Later add feature to adjust number of days based on month selected */}
             <div className={styles.fieldGroup}>
                 <label>Date of birth:</label>
                 <div className={styles.dobRow}>
-                    <select name="day" onChange={handleChange}>
+                    <select name="day" onChange={formInputChanged}>
                         <option value="">Day</option>
                         {[...Array(getDaysInMonth(formData.month, formData.year))].map((_, i) => (
                             <option key={i + 1} value={i + 1}>{i + 1}</option>
                         ))}
                     </select>
-                    <select name="month" onChange={handleChange}>
+                    <select name="month" onChange={formInputChanged}>
                         <option value="">Month</option>
                         {["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].map((m, i) => (
                             <option key={i} value={m}>{m}</option>
                         ))}
                     </select>
-                    <select name="year" onChange={handleChange}>
+                    <select name="year" onChange={formInputChanged}>
                         <option value="">Year</option>
                         {[...Array(100)].map((_, i) => (
                             <option key={i} value={2026 - i}>{2026 - i}</option>
@@ -129,23 +150,23 @@ function RegisterForm() {
             {/* Location */}
             <div className={styles.fieldGroup}>
                 <label htmlFor="location">Location:</label>
-                <input type="text" id="location" name="location" onChange={handleChange} />
+                <input type="text" id="location" name="location" onChange={formInputChanged} />
             </div>
 
             {/* Email */}
             <div className={styles.fieldGroup}>
                 <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="email" onChange={handleChange} />
+                <input type="email" id="email" name="email" onChange={formInputChanged} />
             </div>
 
             {/* Passwords */}
             <div className={styles.fieldGroup}>
                 <label htmlFor="password">Password:</label>
-                <input type="password" id="password" name="password" onChange={handleChange} />
+                <input type="password" id="password" name="password" onChange={formInputChanged} />
             </div>
             <div className={styles.fieldGroup}>
                 <label htmlFor="confirmPassword">Confirm password:</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" onChange={handleChange} />
+                <input type="password" id="confirmPassword" name="confirmPassword" onChange={formInputChanged} />
             </div>
 
             <button type="button" onClick={registerClicked} className={styles.submitBtn}>Sign up</button>
