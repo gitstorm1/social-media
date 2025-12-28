@@ -1,5 +1,5 @@
 import { useAuth } from "./context/AuthContext";
-import HeaderLogo from "./components/Header/components/HeaderLogo/HeaderLogo.tsx";
+import Header from "./components/Header/Header.tsx";
 import HomePage from "./pages/HomePage/HomePage.tsx";
 import ProfilePage from "./pages/ProfilePage/ProfilePage.tsx";
 import RegisterPage from "./pages/RegisterPage/RegisterPage.tsx";
@@ -21,12 +21,7 @@ function App() {
         >
             {/* Show header only if user is logged in */}
             {user && (
-                <header className={styles.header}>
-                    <HeaderLogo />
-                    <div className={styles.profileSection}>
-                        <img src="https://i.pravatar.cc/150" alt="Profile" className={styles.profilePic} />
-                    </div>
-                </header>
+                <Header />
             )}
 
             <main>
