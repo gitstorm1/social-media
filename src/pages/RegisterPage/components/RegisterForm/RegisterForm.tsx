@@ -1,18 +1,27 @@
 import { useState, useEffect } from "react";
 import styles from "./RegisterForm.module.css";
+import { useAuth } from "../../../../context/AuthContext.tsx";
 
 const DAYS_IN_MONTH: { [key: string]: number } = {
     Jan: 31, Feb: 28, Mar: 31, Apr: 30, May: 31, Jun: 30,
     Jul: 31, Aug: 31, Sep: 30, Oct: 31, Nov: 30, Dec: 31,
 };
 
+const MONTHS_MAP: { [key: string]: string } = {
+    Jan: '01', Feb: '02', Mar: '03', Apr: '04', May: '05', Jun: '06',
+    Jul: '07', Aug: '08', Sep: '09', Oct: '10', Nov: '11', Dec: '12'
+};
+
+const REGISTER_URL = 'http://localhost:5000/api/v1/auth/register'
+
 function RegisterForm() {
+    const { login } = useAuth();
+    
     const [formData, setFormData] = useState({
         firstName: "", lastName: "", gender: "",
         day: "", month: "", year: "",
         location: "", email: "", password: "", confirmPassword: ""
     });
-
 
     function getDaysInMonth(month: string, yearStr: string) {
         if (!month) return 31;
@@ -36,6 +45,41 @@ function RegisterForm() {
     const handleChange: React.ChangeEventHandler<HTMLInputElement | HTMLSelectElement> = (element) => {
         setFormData(prev => ({ ...prev, [element.target.name]: element.target.value }));
     };
+
+    async function registerClicked() {
+        const { day, month, year, ...rest } = formData;
+
+        // Format the date into YYYY-MM-DD format
+        const formattedDay = day.padStart(2, '0');
+        const formattedMonth = MONTHS_MAP[month];
+
+        const payload = {
+            ...rest,
+            dateOfBirth: `${year}-${formattedMonth}-${formattedDay}`,
+        };
+
+        console.log(payload);
+        
+        try {
+            const response = await fetch(REGISTER_URL, {
+                method: 'POST',
+                credentials: 'include',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                console.log('Success:', data);
+                login(data.userId); 
+            } else {
+                console.error('Backend Error:', data.message);
+            }
+        } catch (err) {
+            console.error('Network error:', err);
+        }
+    }
 
     return (
         <form className={styles.form}>
@@ -104,7 +148,7 @@ function RegisterForm() {
                 <input type="password" id="confirmPassword" name="confirmPassword" onChange={handleChange} />
             </div>
 
-            <button type="button" onClick={() => {console.log("Clicked")}} className={styles.submitBtn}>Sign up</button>
+            <button type="button" onClick={registerClicked} className={styles.submitBtn}>Sign up</button>
         </form>
     )
 }
