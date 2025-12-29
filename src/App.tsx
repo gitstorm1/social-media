@@ -27,7 +27,7 @@ function App() {
             <main>
                 {/* Routing to the correct page here */}
                 {!user ? (
-                    <RegisterPage /> // Or <LoginPage />
+                    <LoginPage /> // Or <LoginPage />
                 ) : (
                     <HomePage />
                 )}

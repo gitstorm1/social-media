@@ -29,7 +29,7 @@ function RegisterForm() {
 
         const year = parseInt(yearStr);
         if (!year) return 28;
-        
+
         const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
         return isLeapYear ? 29 : 28;
     }
@@ -80,7 +80,7 @@ function RegisterForm() {
 
             if (response.ok) {
                 console.log('Success:', data);
-                login(data.userId); 
+                login(data.userId);
             } else {
                 console.error('Backend Error:', data.message);
             }
@@ -89,9 +89,13 @@ function RegisterForm() {
         }
     }
 
+    const [debounce, setDebounce] = useState(false);
+
     async function registerClicked() {
+        if (debounce) return;
+
         const payload = convertFormDataToPayload();
-        
+
         const isPayloadValid = validatePayload(payload);
 
         if (!isPayloadValid) {
@@ -99,7 +103,11 @@ function RegisterForm() {
             return;
         }
 
-        sendRegisterRequest(payload);
+        setDebounce(true);
+
+        await sendRegisterRequest(payload);
+
+        setDebounce(false);
     }
 
     return (
@@ -169,7 +177,13 @@ function RegisterForm() {
                 <input type="password" id="confirmPassword" name="confirmPassword" onChange={formInputChanged} />
             </div>
 
-            <button type="button" onClick={registerClicked} className={styles.submitBtn}>Sign up</button>
+            <button
+                type="button"
+                onClick={registerClicked}
+                className={styles.submitBtn}
+            >
+                {debounce ? 'Creating account...' : 'Sign up'}
+            </button>
         </form>
     )
 }
