@@ -31,7 +31,7 @@ function App() {
                 {!user ? (
                     <LoginPage /> // Or <LoginPage />
                 ) : (
-                    <ProfilePage />
+                    <HomePage />
                 )}
             </main>
         </div>
