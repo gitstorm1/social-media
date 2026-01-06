@@ -1,17 +1,23 @@
 import styles from "./LeftSection.module.css";
 
+import { useAuth } from "../../../../../context/AuthContext";
+
 function LeftSection() {
+    const context = useAuth();
+
+    const user = context.user;
+
     return (
         <section className={styles.leftSection}>
             <div className={styles.introCard}>
                 <h3>Intro</h3>
                 <div className={styles.introItem}>
                     <h4>Bio</h4>
-                    <p>Full-stack developer and coffee enthusiast.</p>
+                    <p>{user.bio ?? "No bio."}</p>
                 </div>
                 <div className={styles.introItem}>
                     <h4>Location</h4>
-                    <p>Karachi, Pakistan</p>
+                    <p>{user.location}</p>
                 </div>
             </div>
             <div className={styles.friendsCard}>

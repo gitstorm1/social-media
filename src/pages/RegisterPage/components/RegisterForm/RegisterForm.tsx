@@ -80,7 +80,7 @@ function RegisterForm() {
 
             if (response.ok) {
                 console.log('Success:', data);
-                login(data);
+                login(data.user);
             } else {
                 console.error('Backend Error:', data.message);
             }

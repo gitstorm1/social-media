@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 
 interface AuthContextType {
-    user: { userId: string } | null;
+    user: any | null;
     isLoading: boolean;
     login: (userId: string) => void;
     logout: () => void;
@@ -18,10 +18,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         const checkAuth = async () => {
             try {
                 const res = await fetch('http://localhost:5000/api/v1/users/me', { credentials: 'include' });
-                console.log(res.ok);
                 if (res.ok) {
-                    const data = await res.json();
-                    setUser(data);
+                    const user = await res.json();
+                    setUser(user);
                 }
             } catch (err) {
                 console.error(err);

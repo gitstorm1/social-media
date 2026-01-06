@@ -22,7 +22,7 @@ export const profilePostsData: PostData[] = [
     },
     {
         user: {
-            id: "me-001",
+            id: "me-0011",
             username: "Abdul Hadi",
             avatarUrl: "https://i.pravatar.cc/150?u=me",
         },
@@ -31,7 +31,7 @@ export const profilePostsData: PostData[] = [
     },
     {
         user: {
-            id: "me-001",
+            id: "me-00111",
             username: "Abdul Hadi",
             avatarUrl: "https://i.pravatar.cc/150?u=me",
         },
