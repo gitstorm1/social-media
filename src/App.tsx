@@ -14,6 +14,8 @@ function App() {
 
     const isAuthPage = !user;
 
+    console.log(user);
+
     return (
         <div 
             className={styles.app} 

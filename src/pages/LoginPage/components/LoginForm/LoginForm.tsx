@@ -33,7 +33,7 @@ function LoginForm() {
 
             if (response.ok) {
                 console.log('Success:', data);
-                login(data.userId); 
+                login(data); 
             } else {
                 console.error('Backend Error:', data.message);
             }
